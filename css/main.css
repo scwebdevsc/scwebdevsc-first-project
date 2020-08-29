@@ -1,0 +1,351 @@
+/* ############################## CSS VARIABLES ############################## */
+:root {
+  --primaryYellow: #f4e409;
+  --secondaryYellow: #fefbdb;
+  --thirdYellow: #fcf288;
+  --primaryGrey: #555555;
+  --primaryTransition: all 0.3s linear;
+}
+/* ############################## UNIVERSAL STYLES ############################## */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--primaryGrey);
+}
+img {
+  display: block;
+  width: 100%;
+}
+.page-section {
+  max-width: 100%;
+  padding: 90px 50px 50px 50px;
+  margin: 0 auto;
+}
+.section-heading {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* ############################## HEADER ############################## */
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  background-color: var(--primaryYellow);
+  border-bottom: 2px solid var(--primaryGrey);
+  box-shadow: 0 2px 2px var(--primaryGrey);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--primaryGrey);
+}
+.logo--left {
+  transform: rotate(180deg);
+}
+.link-top {
+  color: var(--primaryGrey);
+  text-decoration: none;
+}
+.topnav__item {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.topnav__item--link {
+  text-decoration: none;
+  color: var(--primaryGrey);
+  padding: 8px 10px;
+  margin: 20px 0 20px 20px;
+  border-radius: 20px;
+  transition: var(--primaryTransition);
+}
+.topnav__item--link:hover {
+  color: var(--primaryYellow);
+  background-color: var(--primaryGrey);
+}
+/* ############################## HAMBURGER MENU ############################## */
+@media screen and (max-width: 1000px) {
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 1;
+  }
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    padding: 10px;
+    background-color: var(--primaryYellow);
+    z-index: 1;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primaryGrey);
+    transition: var(--primaryTransition);
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 5px;
+    background: inherit;
+    z-index: 1;
+  }
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  .menu-wrap .toggler:checked + .hamburger {
+    background-color: var(--primaryYellow);
+  }
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.3s;
+  }
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.3s linear 0.4s;
+  }
+  .menu-wrap .menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+    overflow: hidden;
+    text-align: center;
+  }
+  .menu-wrap .menu > div {
+    width: 100%;
+    background-color: rgba(85, 85, 85, 0.8);
+    transform: scale(0);
+    transition: var(--primaryTransition);
+  }
+  .menu-wrap .menu > div > div {
+    max-width: 100vw;
+    max-height: 100vh;
+    text-align: center;
+    opacity: 0;
+    transition: var(--primaryTransition);
+  }
+  .menu-wrap .menu > div > div > ul > li {
+    width: 100vw;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 3rem;
+    color: var(--primaryYellow);
+  }
+  .menu-wrap .menu > div > div > ul > li > a {
+    width: 100%;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s linear;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--primaryYellow);
+    transition: var(--primaryTransition);
+  }
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    background-color: rgba(85, 85, 85, 1);
+    transform: translateX(10px);
+  }
+}
+/* ############################## BANNER ############################## */
+.banner {
+  position: relative;
+  height: 100vh;
+  color: var(--primaryYellow);
+  background-color: rgba(35, 194, 239, 0.6);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.banner__heading {
+  font-size: 10rem;
+  font-weight: 900;
+  margin: 0 20px;
+  animation-name: heading-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+.banner__paragraph {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--primaryYellow);
+  margin-top: 20px;
+  animation-name: paragraph-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+.banner__btn {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primaryYellow);
+  padding: 10px 30px;
+  margin-top: 20px;
+  background-color: var(--primaryGrey);
+  border: 5px solid var(--primaryYellow);
+  border-radius: 20px;
+  transition: var(--primaryTransition);
+  animation-name: button-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+.banner__btn:hover {
+  color: var(--primaryGrey);
+  background-color: var(--primaryYellow);
+  border: 5px solid var(--primaryGrey);
+  transform: scale(1.1);
+}
+.banner__btn:active {
+  transform: scale(1);
+}
+/* ############################## BANNER ANIMATIONS ############################## */
+@keyframes heading-animation {
+  0% {
+    transform: translate(1000px, -300px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(300px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes paragraph-animation {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes button-animation {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* ############################## ABOUT US ############################## */
+.about-us {
+  background-color: var(--secondaryYellow);
+}
+/* ############################## FLIGHTS ############################## */
+.flights {
+  background-color: var(--thirdYellow);
+}
+/* ############################## BOOKING ############################## */
+.booking {
+  background-color: var(--secondaryYellow);
+}
+/* ############################## CONTACT US ############################## */
+.contact-us {
+  background-color: var(--thirdYellow);
+}
+/* ############################## FOOTER ############################## */
+.footer {
+  background-color: var(--secondaryYellow);
+}
+/* ############################## MEDIA QUERIES FOR HEADER SECTION ############################## */
+@media screen and (max-width: 1000px) {
+  .topnav {
+    display: none;
+  }
+}
+@media screen and (min-width: 1001px) {
+  .menu-wrap {
+    display: none;
+  }
+}
