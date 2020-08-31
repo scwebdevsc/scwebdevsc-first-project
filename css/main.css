@@ -4,7 +4,9 @@
   --secondaryYellow: #fefbdb;
   --thirdYellow: #fcf288;
   --primaryGrey: #555555;
+  --primaryBorder: 1px solid var(--primaryGrey);
   --primaryTransition: all 0.3s linear;
+  --primaryBoxShadow: 5px 5px 5px var(--primaryGrey);
 }
 /* ############################## UNIVERSAL STYLES ############################## */
 *,
@@ -21,6 +23,9 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primaryGrey);
+}
+p {
+  font-size: 2rem;
 }
 img {
   display: block;
@@ -182,7 +187,7 @@ img {
   }
   .menu-wrap .menu > div {
     width: 100%;
-    background-color: rgba(85, 85, 85, 0.8);
+    background-color: rgba(85, 85, 85, 1);
     transform: scale(0);
     transition: var(--primaryTransition);
   }
@@ -200,6 +205,7 @@ img {
     font-size: 3rem;
     color: var(--primaryYellow);
   }
+
   .menu-wrap .menu > div > div > ul > li > a {
     width: 100%;
     display: block;
@@ -211,7 +217,7 @@ img {
     transition: var(--primaryTransition);
   }
   .menu-wrap .menu > div > div > ul > li > a:hover {
-    background-color: rgba(85, 85, 85, 1);
+    background-color: rgba(100, 100, 100, 1);
     transform: translateX(10px);
   }
 }
@@ -322,6 +328,42 @@ img {
 .about-us {
   background-color: var(--secondaryYellow);
 }
+.about-us__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.about-us__text--paragraph {
+  text-align: justify;
+}
+.about-us__photo--wrapper {
+  position: relative;
+}
+.about-us__photo {
+  border: var(--primaryBorder);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.about-us__photo--sky {
+  transition: var(--primaryTransition);
+}
+.about-us__photo--airplane {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transition: var(--primaryTransition);
+}
+.about-us__photo--wrapper:hover .about-us__photo--sky {
+  transform: scale(1.1);
+}
+.about-us__photo--wrapper:hover .about-us__photo--airplane {
+  transform: scale(1.1);
+}
+
 /* ############################## FLIGHTS ############################## */
 .flights {
   background-color: var(--thirdYellow);
@@ -334,9 +376,100 @@ img {
 .contact-us {
   background-color: var(--thirdYellow);
 }
+.social__items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.social__item--link {
+  width: 100px;
+  height: 100px;
+  text-decoration: none;
+  background-color: var(--secondaryYellow);
+  border: var(--primaryBorder);
+  border-radius: 25px;
+  transition: var(--primaryTransition);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.social__item--icon {
+  font-size: 5rem;
+  text-align: center;
+}
+.fa-github {
+  color: #4078c0;
+}
+.fa-stack-overflow {
+  color: #ef8236;
+}
+.fa-linkedin-in {
+  color: #0e76a8;
+}
+.fa-twitter {
+  color: #00acee;
+}
+.fa-facebook-f {
+  color: #4267b2;
+}
+.fa-instagram {
+  color: #3f729b;
+}
+.social__item--link:hover {
+  transform: scale(1.1);
+  box-shadow: var(--primaryBoxShadow);
+}
+.social__item--link:active {
+  transform: scale(1);
+}
+.social__item--link:focus {
+  outline: none;
+}
 /* ############################## FOOTER ############################## */
 .footer {
   background-color: var(--secondaryYellow);
+  padding: 20px;
+}
+.footer__nav--items {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.footer__nav--item {
+  display: inline-block;
+  font-size: 2rem;
+  list-style-type: none;
+}
+.footer__nav--link {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primaryGrey);
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  transition: var(--primaryTransition);
+}
+.footer__nav--link:hover {
+  color: var(--primaryYellow);
+  background-color: var(--primaryGrey);
+}
+.copy-right {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px auto 0 auto;
 }
 /* ############################## MEDIA QUERIES FOR HEADER SECTION ############################## */
 @media screen and (max-width: 1000px) {
