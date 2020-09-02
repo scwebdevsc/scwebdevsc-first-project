@@ -340,6 +340,11 @@ img {
 .about-us__text--paragraph {
   text-align: justify;
 }
+.about-us__link {
+  font-weight: 700;
+  color: #0074ff;
+  text-decoration: none;
+}
 .about-us__photo--wrapper {
   position: relative;
 }
@@ -349,32 +354,224 @@ img {
   overflow: hidden;
 }
 .about-us__photo--sky {
-  transition: var(--primaryTransition);
+  animation-name: about-us-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .about-us__photo--airplane {
   position: absolute;
   top: 20%;
   left: 30%;
-  transition: var(--primaryTransition);
+  animation-name: about-us-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-.about-us__photo--wrapper:hover .about-us__photo--sky {
-  transform: scale(1.1);
+/* ############################## ABOUT US ANIMATION ############################## */
+@keyframes about-us-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
-.about-us__photo--wrapper:hover .about-us__photo--airplane {
-  transform: scale(1.1);
-}
-
 /* ############################## FLIGHTS ############################## */
 .flights {
   background-color: var(--thirdYellow);
+}
+.flights__paragraph {
+  margin-bottom: 30px;
+}
+.timetable__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.timetable {
+  max-width: 500px;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primaryGrey);
+  border: 3px solid var(--primaryGrey);
+  border-collapse: collapse;
+}
+.timetable__header {
+  width: 300px;
+}
+.timetable th,
+.timetable td {
+  border: 3px solid var(--primaryGrey);
+  padding: 5px 20px;
+}
+.timetable__icon {
+  padding: 0 15px;
 }
 /* ############################## BOOKING ############################## */
 .booking {
   background-color: var(--secondaryYellow);
 }
+.radio__paragraph {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+}
+.booking__form--wrapper {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: var(--thirdYellow);
+  border: var(--primaryBorder);
+  border-radius: 10px;
+}
+.booking__form {
+  display: grid;
+  grid-template-areas:
+    "flight-type flight-type . ."
+    "destination destination . ."
+    "departure return adults children"
+    "travel-class travel-class . .";
+  gap: 20px;
+}
+.flight-type {
+  grid-area: flight-type;
+}
+.destination {
+  grid-area: destination;
+}
+.departure {
+  grid-area: departure;
+}
+.return {
+  grid-area: return;
+}
+.adults {
+  grid-area: adults;
+}
+.children {
+  grid-area: children;
+}
+.travel-class {
+  grid-area: travel-class;
+}
+.booking__label {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primaryGrey);
+}
+.booking__input {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primaryGrey);
+}
+.booking__input:focus {
+  outline: none;
+}
+.input__roundtrip:checked {
+  font-size: 5rem;
+}
+.input__roundtrip,
+.input__one-way {
+  margin: 0 5px;
+}
+.input__destination,
+.input__travel-class {
+  width: 170px;
+  border: 3px solid var(--primaryGrey);
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+.input__departure,
+.input__return {
+  width: 100%;
+  padding: 5px;
+  border: 3px solid var(--primaryGrey);
+  border-radius: 10px;
+}
+.input__adults,
+.input__children {
+  width: 100%;
+  padding: 5px;
+  border: 3px solid var(--primaryGrey);
+  border-radius: 10px;
+}
 /* ############################## CONTACT US ############################## */
 .contact-us {
   background-color: var(--thirdYellow);
+}
+.form__message {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto 30px auto;
+  background-color: var(--secondaryYellow);
+  border: var(--primaryBorder);
+  border-radius: 10px;
+}
+.form__inputs {
+  display: grid;
+  grid-template-areas:
+    "name email"
+    "message message";
+  gap: 20px;
+}
+.input__name {
+  grid-area: name;
+}
+.input__email {
+  grid-area: email;
+}
+.input__message {
+  grid-area: message;
+  height: 100px;
+}
+.text__input {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primaryGrey);
+  padding: 10px;
+  border: 1px solid var(--primaryGrey);
+  border-radius: 10px;
+}
+.text__input:focus {
+  border: 3px solid var(--primaryGrey);
+  outline: none;
+}
+.form__btn {
+  display: block;
+  width: 200px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primaryYellow);
+  background-color: var(--primaryGrey);
+  padding: 10px;
+  margin: 20px auto 20px auto;
+  border: 1px solid var(--primaryGrey);
+  border-radius: 20px;
+  transition: var(--primaryTransition);
+  cursor: pointer;
+}
+.form__btn:focus {
+  outline: none;
+}
+.form__btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--primaryBoxShadow);
 }
 .social__items {
   display: grid;

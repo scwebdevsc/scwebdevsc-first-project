@@ -83,7 +83,7 @@
         <h2 class="section-heading">About us</h2>
         <article class="about-us__wrapper section-wrapper">
           <div class="about-us__text">
-            <p class="about-us__text--paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque alias repellat cupiditate dolorum incidunt excepturi, dicta architecto soluta provident molestias facilis eveniet! Quas maxime non aliquid, rem quos et dolorem.</p>
+            <p class="about-us__text--paragraph">SC Airlines is a fictional project of web developer Srđan Cvijetić from Bosnia and Herzegovina. If you are interested, find out more about <a href="" class="about-us__link">SCwebdevSC</a></p>
           </div>
           <div class="about-us__photo--wrapper">
           <div class="about-us__photo">
@@ -97,18 +97,219 @@
       <!-- ############################## FLIGHTS SECTION ############################## -->
       <section id="flights" class="flights page-section">
         <h2 class="section-heading">Flights</h2>
-        <article class="flights__wrapper section-wrapper"></article>
+        <article class="flights__wrapper section-wrapper">
+          <p class="flights__paragraph">Fly with us to top 10 European destinations every day. For more information about our flight schedule please check out Bijeljina Airport timetable.</p>
+        <p class="form__message">Bijeljina airport timetable</p>
+        <div class="timetable__wrapper">
+          <!-- TIMETABLE FOR ARRIVALS -->
+          <table class="timetable">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Flight</th>
+                <th class="timetable__header"><i class="fas fa-plane-arrival timetable__icon"></i>Arrivals<i class="fas fa-plane-arrival timetable__icon"></i></th>
+              </tr>
+              <tr>
+                <td>08:00</td>
+                <td>SC001</td>
+                <td>Amsterdam</td>
+              </tr>
+              <tr>
+                <td>09:00</td>
+                <td>SC002</td>
+                <td>Berlin</td>
+              </tr>
+              <tr>
+                <td>10:00</td>
+                <td>SC003</td>
+                <td>Copenhagen</td>
+              </tr>
+              <tr>
+                <td>11:00</td>
+                <td>SC004</td>
+                <td>London</td>
+              </tr>
+              <tr>
+                <td>12:00</td>
+                <td>SC005</td>
+                <td>Madrid</td>
+              </tr>
+              <tr>
+                <td>13:00</td>
+                <td>SC006</td>
+                <td>Moscow</td>
+              </tr>
+              <tr>
+                <td>14:00</td>
+                <td>SC007</td>
+                <td>Oslo</td>
+              </tr>
+              <tr>
+                <td>15:00</td>
+                <td>SC008</td>
+                <td>Paris</td>
+              </tr>
+              <tr>
+                <td>16:00</td>
+                <td>SC009</td>
+                <td>Rome</td>
+              </tr>
+              <tr>
+                <td>17:00</td>
+                <td>SC010</td>
+                <td>Stockholm</td>
+              </tr>
+            </thead>
+          </table>
+          <!-- TIMETABLE FOR DEPARTURES -->
+          <table class="timetable">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Flight</th>
+                <th class="timetable__header"><i class="fas fa-plane-departure timetable__icon"></i>Departures<i class="fas fa-plane-departure timetable__icon"></i></th>
+              </tr>
+              <tr>
+                <td>15:00</td>
+                <td>SC001</td>
+                <td>Amsterdam</td>
+              </tr>
+              <tr>
+                <td>16:00</td>
+                <td>SC002</td>
+                <td>Berlin</td>
+              </tr>
+              <tr>
+                <td>17:00</td>
+                <td>SC003</td>
+                <td>Copenhagen</td>
+              </tr>
+              <tr>
+                <td>18:00</td>
+                <td>SC004</td>
+                <td>London</td>
+              </tr>
+              <tr>
+                <td>19:00</td>
+                <td>SC005</td>
+                <td>Madrid</td>
+              </tr>
+              <tr>
+                <td>20:00</td>
+                <td>SC006</td>
+                <td>Moscow</td>
+              </tr>
+              <tr>
+                <td>21:00</td>
+                <td>SC007</td>
+                <td>Oslo</td>
+              </tr>
+              <tr>
+                <td>22:00</td>
+                <td>SC008</td>
+                <td>Paris</td>
+              </tr>
+              <tr>
+                <td>23:00</td>
+                <td>SC009</td>
+                <td>Rome</td>
+              </tr>
+              <tr>
+                <td>2400</td>
+                <td>SC010</td>
+                <td>Stockholm</td>
+              </tr>
+            </thead>
+          </table>
+          <table class="timetable__departures">
+          </table>
+        </div>
+        </article>
       </section>
       <!-- ############################## END OF FLIGHTS SECTION ############################## -->
       <!-- ############################## BOOKING SECTION ############################## -->
       <section id="booking" class="booking page-section">
         <h2 class="section-heading">Booking</h2>
-        <article class="booking__wrapper section-wrapper"></article>
+        <article class="booking__form--wrapper">
+          <p class="form__message">Find your flight from Bijeljina</p>
+          <form action="" class="booking__form">
+            <div class="flight-type">
+              <p class="radio__paragraph">Flight type:</p>
+              <input type="radio" id="roundtrip" name="flight-type" class="booking__input input__roundtrip">
+              <label for="roundtrip" class="booking__label label__radio">Round trip</label>
+              <input type="radio" id="one-way" name="flight-type" class="booking__input input__one-way">
+              <label for="one-way" class="booking__label label__radio">One way</label>
+            </div>
+            <div class="destination">
+              <label for="destination" class="booking__label label__destination">Destination:</label>
+              <select name="destination" id="destination" class="booking__input input__destination">
+                <option value="0" disabled selected>Flying to</option>
+                <option value="1" class="destination__option">Amsterdam</option>
+                <option value="2">Berlin</option>
+                <option value="3">Copenhagen</option>
+                <option value="4">London</option>
+                <option value="5">Madrid</option>
+                <option value="6">Moscow</option>
+                <option value="7">Oslo</option>
+                <option value="8">Paris</option>
+                <option value="9">Rome</option>
+                <option value="10">Stockholm</option>
+              </select>
+            </div>
+            <div class="departure">
+              <label for="departure" class="booking__label label__departure">Departing:</label>
+              <input type="date" id="departure" class="booking__input input__departure">
+            </div>
+            <div class="return">
+              <label for="return" class="booking__label label__return">Returning:</label>
+              <input type="date" id="return" class="booking__input input__return">
+            </div>
+            <div class="adults">
+              <label for="adults" class="booking__label label__adults">Adults:</label>
+              <select name="adults" id="adults" class="booking__input input__adults">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="children">
+              <label for="children" class="booking__label label__children">Children:</label>
+              <select name="children" id="children" class="booking__input input__children">
+              <option value="0" selected></option>
+              <option option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            </div>
+            <div class="travel-class">
+              <label for="travel-class" class="booking__label label__travel-class">Travel class:</label>
+              <select name="travel-class" id="travel-class" class="booking__input input__travel-class">
+                <option value="1" selected>Economy</option>
+                <option value="2">Business class</option>
+                <option value="3">First class</option>
+              </select>
+            </div>
+          </form>
+          <button type="submit" class="form__btn">Find your flight</button>
+        </article>
       </section>
       <!-- ############################## END OF BOOKING SECTION ############################## -->
       <!-- ############################## CONTACT US SECTION ############################## -->
       <section id="contact-us" class="contact-us page-section">
         <h2 class="section-heading">Contact us</h2>
+        <article class="form">
+          <p class="form__message">Send us a message</p>
+          <form method="POST" action="# " class="form__wrapper"></form>
+          <div class="form__inputs">
+            <input type="text" class="text__input input__name" placeholder="Name">
+            <input type="email" class="text__input input__email" placeholder="Email">
+            <textarea class="text__input input__message" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="form__btn">Send</button>
+        </article>
+        <p class="form__message">Contact us on:</p>
         <article class="social__items section-wrapper">
           <!-- GITHUB -->
           <a
