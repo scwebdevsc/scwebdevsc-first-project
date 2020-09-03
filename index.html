@@ -16,11 +16,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
     <script
       src="https://kit.fontawesome.com/4c85bc995e.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
   </head>
   <body>
     <main>
@@ -30,7 +30,7 @@
           <div class="logo">
             <a href="#header" class="link-top"
               ><h3>
-                <i class="fas fa-plane logo--left"></i> SC Airlines
+                <i class="fas fa-plane logo--left"></i> SC <span class="logo__small">Airlines</span>
                 <i class="fas fa-plane"></i></h3
             ></a>
           </div>
@@ -89,6 +89,10 @@
           <div class="about-us__photo">
             <img src="img/skyline.jpg" class="about-us__photo--sky" alt="Wonderful sky">
             <img src="img/airplane.png" class="about-us__photo--airplane" alt="Airplane photo">
+                        <img src="img/airplane-small.jpg" alt="Airplane photo" class="about-us__photo--small">
+
+          </div>
+          <div class="about-us__wrapper--small">
           </div>
         </div>
         </article>
@@ -102,6 +106,7 @@
         <p class="form__message">Bijeljina airport timetable</p>
         <div class="timetable__wrapper">
           <!-- TIMETABLE FOR ARRIVALS -->
+          <div class="timetable__arivals">
           <table class="timetable">
             <thead>
               <tr>
@@ -161,7 +166,9 @@
               </tr>
             </thead>
           </table>
+        </div>
           <!-- TIMETABLE FOR DEPARTURES -->
+          <div class="timetable__departures">
           <table class="timetable">
             <thead>
               <tr>
@@ -223,6 +230,7 @@
           </table>
           <table class="timetable__departures">
           </table>
+            </div>
         </div>
         </article>
       </section>

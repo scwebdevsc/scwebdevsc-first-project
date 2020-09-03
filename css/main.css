@@ -106,8 +106,8 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 58px;
-    height: 58px;
+    width: 57px;
+    height: 57px;
     opacity: 0;
     z-index: 2;
     cursor: pointer;
@@ -116,8 +116,8 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 58px;
-    height: 58px;
+    width: 57px;
+    height: 57px;
     padding: 10px;
     background-color: var(--primaryYellow);
     z-index: 1;
@@ -251,7 +251,8 @@ img {
 .banner__heading {
   font-size: 10rem;
   font-weight: 900;
-  margin: 0 20px;
+  text-align: center;
+  margin: 0 30px;
   animation-name: heading-animation;
   animation-duration: 2s;
   animation-timing-function: linear;
@@ -259,8 +260,9 @@ img {
 .banner__paragraph {
   font-size: 5rem;
   font-weight: 700;
+  text-align: center;
   color: var(--primaryYellow);
-  margin-top: 20px;
+  margin: 20px 30px 0 30px;
   animation-name: paragraph-animation;
   animation-duration: 2s;
   animation-timing-function: linear;
@@ -384,6 +386,7 @@ img {
   background-color: var(--thirdYellow);
 }
 .flights__paragraph {
+  text-align: justify;
   margin-bottom: 30px;
 }
 .timetable__wrapper {
@@ -395,8 +398,12 @@ img {
   justify-content: center;
   align-content: center;
 }
+.timetable__arivals,
+.timetable__departures {
+  width: 500px;
+}
 .timetable {
-  max-width: 500px;
+  width: 100%;
   font-size: 2rem;
   text-align: center;
   color: var(--primaryGrey);
@@ -404,7 +411,7 @@ img {
   border-collapse: collapse;
 }
 .timetable__header {
-  width: 300px;
+  width: 100%;
 }
 .timetable th,
 .timetable td {
@@ -412,8 +419,10 @@ img {
   padding: 5px 20px;
 }
 .timetable__icon {
+  display: inline-block;
   padding: 0 15px;
 }
+
 /* ############################## BOOKING ############################## */
 .booking {
   background-color: var(--secondaryYellow);
@@ -454,9 +463,11 @@ img {
 }
 .adults {
   grid-area: adults;
+  width: 100px;
 }
 .children {
   grid-area: children;
+  width: 100px;
 }
 .travel-class {
   grid-area: travel-class;
@@ -668,6 +679,14 @@ img {
   text-align: center;
   margin: 50px auto 0 auto;
 }
+
+/* ############################## MEDIA QUERIES ############################## */
+/* ############################## MEDIA QUERIES FOR UNIVERSAL STYLES ############################## */
+@media screen and (max-width: 1000px) {
+  .page-section {
+    padding: 90px 25px 25px 25px;
+  }
+}
 /* ############################## MEDIA QUERIES FOR HEADER SECTION ############################## */
 @media screen and (max-width: 1000px) {
   .topnav {
@@ -677,5 +696,228 @@ img {
 @media screen and (min-width: 1001px) {
   .menu-wrap {
     display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .logo__small {
+    display: none;
+  }
+}
+/* ############################## MEDIA QUERIES FOR BANNER SECTION ############################## */
+@media screen and (max-width: 703px) {
+  .banner__heading {
+    font-size: 7rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .banner__paragraph {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 574px) {
+  .banner__heading {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 570px) {
+  .banner__paragraph {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 510px) {
+  .banner__heading {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 447px) {
+  .banner__heading {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 570px) {
+  .banner__paragraph {
+    font-size: 2.5rem;
+  }
+  .banner__btn {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 381px) {
+  .banner__heading {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .banner__paragraph {
+    font-size: 2rem;
+  }
+  .banner__btn {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-height: 500px) {
+  .banner {
+    margin-top: 3rem;
+  }
+  .banner__heading {
+    font-size: 3rem;
+    /* margin-top: 2.5rem; */
+  }
+  .banner__paragraph {
+    font-size: 2rem;
+    margin-top: 5px;
+  }
+  .banner__btn {
+    font-size: 2rem;
+    margin-top: 5px;
+  }
+}
+/* ############################## MEDIA QUERIES FOR ABOUT US SECTION ############################## */
+@media screen and (max-width: 1100px) {
+  .about-us__photo--sky,
+  .about-us__photo--airplane {
+    display: none;
+  }
+}
+@media screen and (min-width: 1101px) {
+  .about-us__photo--small {
+    display: none;
+  }
+}
+/* ############################## MEDIA QUERIES FOR FLIGHTS SECTION ############################## */
+@media screen and (max-width: 550px) {
+  .timetable__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .timetable__arivals,
+  .timetable__departures {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 502px) {
+  .timetable__icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .timetable td,
+  .timetable th {
+    padding: 5px 10px;
+  }
+}
+/* ############################## MEDIA QUERIES FOR BOOKING SECTION ############################## */
+@media screen and (max-width: 750px) {
+  .booking__form {
+    width: 100%;
+    grid-template-areas:
+      "flight-type"
+      "destination"
+      "departure"
+      "return"
+      "adults"
+      "children"
+      "travel-class";
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  .departure,
+  .return,
+  .adults,
+  .children {
+    text-align: center;
+  }
+  .input__departure,
+  .input__return {
+    margin-top: 5px;
+  }
+  .adults,
+  .children {
+    width: 100%;
+  }
+  .input__adults,
+  .input__children {
+    width: 100px;
+    margin-left: 5px;
+  }
+  .radio__paragraph,
+  .label__destination,
+  .label__adults,
+  .label__children,
+  .label__travel-class {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+
+/* ############################## MEDIA QUERIES FOR CONTACT US SECTION ############################## */
+@media screen and (max-width: 800px) {
+  .form {
+    width: 100%;
+  }
+  .form__inputs {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "name"
+      "email"
+      "message";
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .social__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 390px) {
+  .social__item--link {
+    width: 80px;
+    height: 80px;
+  }
+  .social__item--icon {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .text__input,
+  .form__btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 310px) {
+  .social__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ############################## MEDIA QUERIES FOR FOOTER SECTION ############################## */
+@media screen and (max-width: 1120px) {
+  .footer__nav--items {
+    grid-template-columns: 1fr;
+  }
+}
+/* ############################## MEDIA QUERIES FOR HOVER ############################## */
+@media screen and (max-width: 1024px) {
+  .banner__btn:hover {
+    color: var(--primaryYellow);
+    background-color: var(--primaryGrey);
+    border: 5px solid var(--primaryYellow);
+    transform: none;
+  }
+  .form__btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .social__item--link:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .footer__nav--link:hover {
+    color: var(--primaryGrey);
+    background-color: transparent;
   }
 }
