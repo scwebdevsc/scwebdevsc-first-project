@@ -449,6 +449,9 @@ img {
     "travel-class travel-class . .";
   gap: 20px;
 }
+.radio__one-way {
+  display: inline-block;
+}
 .flight-type {
   grid-area: flight-type;
 }
@@ -852,7 +855,11 @@ img {
     margin-bottom: 5px;
   }
 }
-
+@media screen and (max-width: 315px) {
+  .radio__one-way {
+    display: block;
+  }
+}
 /* ############################## MEDIA QUERIES FOR CONTACT US SECTION ############################## */
 @media screen and (max-width: 800px) {
   .form {

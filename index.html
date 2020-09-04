@@ -285,15 +285,17 @@
               <label for="roundtrip" class="booking__label label__radio"
                 >Round trip</label
               >
-              <input
-                type="radio"
-                id="one-way"
-                name="flight-type"
-                class="booking__input input__one-way"
-              />
-              <label for="one-way" class="booking__label label__radio"
-                >One way</label
-              >
+              <div class="radio__one-way">
+                <input
+                  type="radio"
+                  id="one-way"
+                  name="flight-type"
+                  class="booking__input input__one-way"
+                />
+                <label for="one-way" class="booking__label label__radio"
+                  >One way</label
+                >
+              </div>
             </div>
             <div class="destination">
               <label for="destination" class="booking__label label__destination"
@@ -361,7 +363,7 @@
                 id="children"
                 class="booking__input input__children"
               >
-                <option label="none" value="none" selected></option>
+                <option value="0" selected>0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
