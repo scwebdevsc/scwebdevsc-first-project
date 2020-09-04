@@ -525,7 +525,7 @@ img {
   margin-bottom: 30px;
 }
 .form {
-  max-width: 800px;
+  width: 800px;
   padding: 20px;
   margin: 0 auto 30px auto;
   background-color: var(--secondaryYellow);
@@ -868,6 +868,14 @@ img {
     gap: 20px;
   }
 }
+@media screen and (max-width: 400px) {
+  .input__name,
+  .input__email,
+  .input__message,
+  .form__btn {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 750px) {
   .social__items {
     grid-template-columns: repeat(3, 1fr);
@@ -882,12 +890,7 @@ img {
     font-size: 4rem;
   }
 }
-@media screen and (max-width: 350px) {
-  .text__input,
-  .form__btn {
-    width: 100%;
-  }
-}
+
 @media screen and (max-width: 310px) {
   .social__items {
     grid-template-columns: repeat(2, 1fr);
