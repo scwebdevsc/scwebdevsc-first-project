@@ -20,6 +20,24 @@
       src="https://kit.fontawesome.com/4c85bc995e.js"
       crossorigin="anonymous"
     ></script>
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="img/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="img/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="img/favicon-16x16.png"
+  />
+  <link rel="manifest" href="img/site.webmanifest" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
   </head>
   <body>
@@ -121,27 +139,27 @@
       <!-- ############################## FLIGHTS SECTION ############################## -->
       <section id="flights" class="flights page-section">
         <h2 class="section-heading">Flights</h2>
-        <div class="flights__wrapper section-wrapper">
+        <article class="flights__wrapper section-wrapper">
           <p class="flights__paragraph">
             Fly with us to top 10 European destinations every day. For more
             information about our flight schedule please check out Bijeljina
             Airport timetable.
           </p>
-          <p class="form__message">Bijeljina airport timetable</p>
+          <h4 class="form__message">Bijeljina airport timetable</h4>
           <div class="timetable__wrapper">
             <!-- TIMETABLE FOR ARRIVALS -->
             <div class="timetable__arivals">
+              <h4 class="form__message">
+                <i class="fas fa-plane-arrival timetable__icon"></i>Arrivals<i
+                  class="fas fa-plane-arrival timetable__icon"
+                ></i>
+              </h4>
               <table class="timetable">
                 <thead>
                   <tr>
                     <th>Time</th>
                     <th>Flight</th>
-                    <th class="timetable__header">
-                      <i class="fas fa-plane-arrival timetable__icon"></i
-                      >Arrivals<i
-                        class="fas fa-plane-arrival timetable__icon"
-                      ></i>
-                    </th>
+                    <th class="timetable__header">From</th>
                   </tr>
                   <tr>
                     <td>08:00</td>
@@ -199,15 +217,18 @@
             <!-- TIMETABLE FOR DEPARTURES -->
             <div class="timetable__departures">
               <table class="timetable">
+                <h4 class="form__message">
+                  <i class="fas fa-plane-departure timetable__icon"></i
+                    ></i>Departures<i
+                    class="fas fa-plane-departure timetable__icon"
+                  ></i>
+                </h4>
                 <thead>
                   <tr>
                     <th>Time</th>
                     <th>Flight</th>
                     <th class="timetable__header">
-                      <i class="fas fa-plane-departure timetable__icon"></i
-                      >Departures<i
-                        class="fas fa-plane-departure timetable__icon"
-                      ></i>
+                      To
                     </th>
                   </tr>
                   <tr>
@@ -256,7 +277,7 @@
                     <td>Rome</td>
                   </tr>
                   <tr>
-                    <td>2400</td>
+                    <td>00:00</td>
                     <td>SC010</td>
                     <td>Stockholm</td>
                   </tr>
@@ -265,7 +286,7 @@
               <table class="timetable__departures"></table>
             </div>
           </div>
-        </div>
+        </article>
       </section>
       <!-- ############################## END OF FLIGHTS SECTION ############################## -->
       <!-- ############################## BOOKING SECTION ############################## -->

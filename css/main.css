@@ -800,11 +800,7 @@ img {
     width: 100%;
   }
 }
-@media screen and (max-width: 502px) {
-  .timetable__icon {
-    display: none;
-  }
-}
+
 @media screen and (max-width: 400px) {
   .timetable td,
   .timetable th {
