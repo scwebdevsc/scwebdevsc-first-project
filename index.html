@@ -21,23 +21,23 @@
       crossorigin="anonymous"
     ></script>
     <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="img/apple-touch-icon.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="img/favicon-32x32.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="img/favicon-16x16.png"
-  />
-  <link rel="manifest" href="img/site.webmanifest" />
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
   </head>
   <body>
@@ -216,20 +216,18 @@
             </div>
             <!-- TIMETABLE FOR DEPARTURES -->
             <div class="timetable__departures">
+              <h4 class="form__message">
+                <i class="fas fa-plane-departure timetable__icon"></i
+                >Departures<i
+                  class="fas fa-plane-departure timetable__icon"
+                ></i>
+              </h4>
               <table class="timetable">
-                <h4 class="form__message">
-                  <i class="fas fa-plane-departure timetable__icon"></i
-                    ></i>Departures<i
-                    class="fas fa-plane-departure timetable__icon"
-                  ></i>
-                </h4>
                 <thead>
                   <tr>
                     <th>Time</th>
                     <th>Flight</th>
-                    <th class="timetable__header">
-                      To
-                    </th>
+                    <th class="timetable__header">To</th>
                   </tr>
                   <tr>
                     <td>15:00</td>
@@ -327,7 +325,7 @@
                 id="destination"
                 class="booking__input input__destination"
               >
-                <option value="0" disabled selected>Flying to</option>
+                <option value="0" disabled selected>Choose city</option>
                 <option value="1" class="destination__option">Amsterdam</option>
                 <option value="2">Berlin</option>
                 <option value="3">Copenhagen</option>
