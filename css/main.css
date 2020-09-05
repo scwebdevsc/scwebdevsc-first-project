@@ -758,13 +758,13 @@ img {
     font-size: 2rem;
   }
 }
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 450px) {
   .banner {
-    margin-top: 3rem;
+    justify-content: start;
   }
   .banner__heading {
     font-size: 3rem;
-    /* margin-top: 2.5rem; */
+    margin-top: 9rem;
   }
   .banner__paragraph {
     font-size: 2rem;
@@ -773,6 +773,9 @@ img {
   .banner__btn {
     font-size: 2rem;
     margin-top: 5px;
+  }
+  .menu-wrap .menu > div > div > ul > li {
+    font-size: 2rem;
   }
 }
 /* ############################## MEDIA QUERIES FOR ABOUT US SECTION ############################## */
