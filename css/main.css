@@ -205,7 +205,6 @@ img {
     font-size: 3rem;
     color: var(--primaryYellow);
   }
-
   .menu-wrap .menu > div > div > ul > li > a {
     width: 100%;
     display: block;
@@ -253,8 +252,11 @@ img {
   font-weight: 900;
   text-align: center;
   margin: 0 30px;
+  -webkit-animation-name: heading-animation;
   animation-name: heading-animation;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 .banner__paragraph {
@@ -263,8 +265,11 @@ img {
   text-align: center;
   color: var(--primaryYellow);
   margin: 20px 30px 0 30px;
+  -webkit-animation-name: paragraph-animation;
   animation-name: paragraph-animation;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 .banner__btn {
@@ -279,8 +284,11 @@ img {
   border: 5px solid var(--primaryYellow);
   border-radius: 20px;
   transition: var(--primaryTransition);
+  -webkit-animation-name: button-animation;
   animation-name: button-animation;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 .banner__btn:hover {
@@ -293,6 +301,19 @@ img {
   transform: scale(1);
 }
 /* ############################## BANNER ANIMATIONS ############################## */
+@-webkit-keyframes heading-animation {
+  0% {
+    transform: translate(1000px, -300px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(300px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 @keyframes heading-animation {
   0% {
     transform: translate(1000px, -300px);
@@ -306,6 +327,16 @@ img {
     opacity: 1;
   }
 }
+@-webkit-keyframes paragraph-animation {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 @keyframes paragraph-animation {
   0% {
     transform: translateX(-1000px);
@@ -313,6 +344,16 @@ img {
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes button-animation {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -356,23 +397,41 @@ img {
   overflow: hidden;
 }
 .about-us__photo--sky {
+  -webkit-animation-name: about-us-animation;
   animation-name: about-us-animation;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 .about-us__photo--airplane {
   position: absolute;
   top: 20%;
   left: 30%;
+  -webkit-animation-name: about-us-animation;
   animation-name: about-us-animation;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 /* ############################## ABOUT US ANIMATION ############################## */
+@-webkit-keyframes about-us-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 @keyframes about-us-animation {
   0% {
     transform: scale(1);
@@ -422,7 +481,6 @@ img {
   display: inline-block;
   padding: 0 15px;
 }
-
 /* ############################## BOOKING ############################## */
 .booking {
   background-color: var(--secondaryYellow);
@@ -682,7 +740,6 @@ img {
   text-align: center;
   margin: 50px auto 0 auto;
 }
-
 /* ############################## MEDIA QUERIES ############################## */
 /* ############################## MEDIA QUERIES FOR UNIVERSAL STYLES ############################## */
 @media screen and (max-width: 1000px) {
@@ -800,7 +857,6 @@ img {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 400px) {
   .timetable td,
   .timetable th {
@@ -896,13 +952,11 @@ img {
     font-size: 4rem;
   }
 }
-
 @media screen and (max-width: 310px) {
   .social__items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 /* ############################## MEDIA QUERIES FOR FOOTER SECTION ############################## */
 @media screen and (max-width: 1120px) {
   .footer__nav--items {
